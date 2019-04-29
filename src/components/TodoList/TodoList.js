@@ -4,13 +4,15 @@ import TodoListItem from '../TodoListItem';
 
 import './TodoList.css';
 
-const TodoList = ({ todoData }) => {
+const TodoList = ({ todoData, deleteItem }) => {
   const listItems = todoData.map((item) => {
     const { id, ...todoListData} = item;
     return (
       <li className='list-group-item'
         key={ id }>
-        <TodoListItem { ...todoListData }/>
+        <TodoListItem { ...todoListData }
+          deleteItem = {() => deleteItem(id)}
+        />
       </li>
     );
   });
