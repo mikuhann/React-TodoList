@@ -17,7 +17,7 @@ export default class App extends Component {
       this.createTodo('Task 3')
     ],
     search: '',
-    filter: 'active' // active,all,done
+    filter: 'all' // active,all,done
   };
 
   createTodo(text) {
